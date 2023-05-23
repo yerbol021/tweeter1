@@ -1,4 +1,5 @@
 nav {
+  position: fixed;
   height: 120px;
   width: 100%;
   background-color: #4056A1;
@@ -23,3 +24,4 @@ nav .nav-content .write-tweet {
 nav .nav-content .angle-icon {
   font-size: 18px;
 }
+
