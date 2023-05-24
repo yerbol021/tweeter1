@@ -1,11 +1,20 @@
 .div1 {
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .label1 {
   border-bottom: 2px solid black;
-  padding-bottom: 7px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.textarea1{
+  /* height: 3000px; */
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
 }
 
 form button[type="submit"] {
@@ -24,4 +33,8 @@ output {
   font-size: 33px;
   text-align: center;
   justify-content: flex-end;
+}
+
+.invalid {
+  color: red;
 }
