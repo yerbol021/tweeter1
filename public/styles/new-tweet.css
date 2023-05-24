@@ -1,0 +1,27 @@
+.div1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label1 {
+  border-bottom: 2px solid black;
+  padding-bottom: 7px;
+}
+
+form button[type="submit"] {
+  height: 30px;
+  width: 10%;
+  background-color: blue;
+  color: white;
+  font-family: "Bungee", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-basis: content;
+}
+
+output {
+  font-family: "Bungee", sans-serif;
+  font-size: 33px;
+  text-align: center;
+  justify-content: flex-end;
+}
