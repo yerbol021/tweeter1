@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // console.log("readyChar");
   $("#tweet-text").on("input", function() {
     let textLength = $(this).val().length;
     let remainingChars = 140 - textLength;

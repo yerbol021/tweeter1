@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
 
 
@@ -39,9 +40,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="scripts/client.js"></script>
+  <script src="scripts/composer-char-counter.js"></script>
 
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
 
 </head>
@@ -81,32 +82,13 @@
         </div>
       </form>
     </section>
-    <article class="tweets-container">
-      <header class="header2">
-        <div class="imgName">
-          <img src="/images/profile-hex.png">
-          <h2 class="name">Newton</h2>
-        </div>
-        <span class="handle">@Sirlsaac</span>
-      </header>
-      <div class="message">
-        <p>Hello, World! This i my first tweet</p>
-      </div>
-      <hr>
-      <footer>
-        <span class="date">10 days ago</span>
-        <div class="icons">
-          <i class="fa-solid fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-        </div>
-      </footer>
-    </article>
+
+    <section class="tweets-container" />
+
   </main>
   <form action="/tweets" method="POST">
     <!-- Form content here -->
   </form>
-  <script src="scripts/composer-char-counter.js"></script>
 </body>
 
 </html>
