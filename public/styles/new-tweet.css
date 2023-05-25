@@ -6,13 +6,15 @@
 }
 
 .label1 {
-  border-bottom: 2px solid black;
   padding-bottom: 20px;
   display: flex;
 }
 
 .textarea1{
-  border-radius: 15px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #f4f1ec;
 }
 
 form button[type="submit"] {

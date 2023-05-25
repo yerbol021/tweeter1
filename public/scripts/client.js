@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     $.post('/tweets', formData)
       .done(function(response) {
-        console.log('ok');
+        loadTweets(response)
       })
       .fail(function(error) {
         console.log('server error:', error);
@@ -49,10 +49,20 @@ $(document).ready(function() {
   </article>`
     return $(tweetElement);
   }
+
   const renderTweets = function(tweets) {
-    for (const tweet of tweets) {
+    const tweetContainer = $('.tweets-container');
+    const sortedTweets = tweets;
+    sortedTweets.sort(function(a,b) {
+      return b.created_at -a.created_at
+    })
+
+    console.log("these are sortedt tweet: ", sortedTweets );
+    
+    tweetContainer.empty();
+    for (const tweet of sortedTweets) {
       const $tweet = createTweetElement(tweet);
-      $('.tweets-container').append($tweet);
+      tweetContainer.append($tweet);
     }
   }
 
