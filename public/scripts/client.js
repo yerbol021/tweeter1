@@ -4,6 +4,15 @@ $(document).ready(function() {
     event.preventDefault();
 
     const formData = $(this).serialize();
+    const tweetText = $(this).find('textarea').val();
+
+    if (tweetText ==="" || tweetText === null){
+      alert("Tweet area cannot be empty!");
+      return;
+    } else if (tweetText.length > 140) {
+      alert("Sorry, max is 140 symbols");
+      return;
+    }
 
     $.post('/tweets', formData)
       .done(function(response) {
@@ -61,27 +70,3 @@ $(document).ready(function() {
 
   loadTweets()
 });
-
-// const $tweet = createTweetElement(tweetData);
-
-// Test / driver code (temporary)
-// console.log($tweet);
-// to see what it looks like
-// $('.tweets-container').append($tweet);
-
-
-
-
-
-// const tweetData =
-// {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//     "handle": "@SirIsaac"
-//   },
-//   "content": {
-//     "text": "If I have seen further it is by standing on the shoulders of giants"
-//   },
-//   "created_at": 1461116232227
-// }
