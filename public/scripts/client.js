@@ -7,10 +7,10 @@ $(document).ready(function() {
     const tweetText = $(this).find('textarea').val();
 
     if (tweetText ==="" || tweetText === null){
-      alert("Tweet area cannot be empty!");
+      $('#error-message').text('⚠️  Tweet area cannot be empty! ⚠️ ').slideToggle('slow');
       return;
     } else if (tweetText.length > 140) {
-      alert("Sorry, max is 140 symbols");
+      $('#error-message').text('⚠️  Sorry, max is 140 symbols ⚠️ ').slideToggle('slow');;
       return;
     }
 
@@ -24,22 +24,28 @@ $(document).ready(function() {
   });
   
   const createTweetElement = function(tweetData) {
-  
+    
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
     const tweetElement = `
   <article class="tweet">
   <header class="header2">
     <div class="imgName">
-      <img src="${tweetData.user.avatars}">
-      <h2 class="name">${tweetData.user.name}</h2>
+      <img src="${escape(tweetData.user.avatars)}">
+      <h2 class="name">${escape(tweetData.user.name)}</h2>
     </div>
-    <span class="handle">${tweetData.user.handle}</span>
+    <span class="handle">${escape(tweetData.user.handle)}</span>
   </header>
   <div class="message">
-    <p>${tweetData.content.text}</p>
+    <p>${escape(tweetData.content.text)}</p>
   </div>
   <hr>
   <footer>
-    <span class="date">${timeago.format(tweetData.created_at)}</span>
+    <span class="date">${escape(timeago.format(tweetData.created_at))}</span>
     <div class="icons">
       <i class="fa-solid fa-flag"></i>
       <i class="fas fa-retweet"></i>

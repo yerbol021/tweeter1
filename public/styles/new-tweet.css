@@ -5,6 +5,10 @@
   padding-bottom: 40px;
 }
 
+.error-message {
+  color: red;
+}
+
 .label1 {
   padding-bottom: 20px;
   display: flex;
