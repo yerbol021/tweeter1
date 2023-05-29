@@ -6,21 +6,24 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /*
  * Global layout stuff
  */
- body {
-   color: #545149;
-   background-color: #f4efec;
-   font-size: 24px;
-   font-family: "Source Sans Pro", sans-serif;
- }
+body {
+  color: #545149;
+  background-color: #f4efec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
 
- main {
+main {
   width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;
@@ -28,7 +31,7 @@ html {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-/* align-content: center; */
+  /* align-content: center; */
   text-align: center;
 }
 
@@ -40,3 +43,55 @@ nav {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+@media only screen and (min-width: 769px) {
+
+  .header11 {
+    width: 33.3%;
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 100px;
+    margin-top: 20px;
+  }
+
+  .container {
+    width: 66.7%;
+    float: right;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 100px;
+    margin-top: 20px;
+  }
+
+  .miniTweet {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .header11 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .miniTweet {
+    display: inline;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    font-family: "Bungee", sans-serif;
+    color: rgb(246, 242, 241);
+  }
+
+  nav {
+    display: none;
+  }
+
+}
