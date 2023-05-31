@@ -79,15 +79,8 @@ nav {
   }
 
   .miniTweet {
-    display: inline;
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 24px;
-    font-family: "Bungee", sans-serif;
-    color: rgb(246, 242, 241);
+    display: none;
+  
   }
 
   nav {

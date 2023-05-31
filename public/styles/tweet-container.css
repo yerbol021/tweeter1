@@ -1,11 +1,11 @@
-.tweets-container {
+.tweet {
   border: 3px solid #504c4c;
   border-radius: 15px;
   padding: 10px;
   margin-bottom: 10px;
 }
 
-.tweets-container:hover {
+.tweet:hover {
   box-shadow: 4px 4px;
 }
 

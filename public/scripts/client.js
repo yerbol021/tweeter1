@@ -2,6 +2,7 @@ $(document).ready(function() {
   console.log("ready");
   $('form').submit(function(event) {
     event.preventDefault();
+    $('#error-message').slideUp ()
 
     const formData = $(this).serialize();
     const tweetText = $(this).find('textarea').val();
@@ -13,6 +14,9 @@ $(document).ready(function() {
       $('#error-message').text('⚠️  Sorry, max is 140 symbols ⚠️ ').slideToggle('slow');;
       return;
     }
+
+    $(this).find('textarea').val('');
+    $(".counter").text('140');
 
     $.post('/tweets', formData)
       .done(function(response) {
