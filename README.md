@@ -29,3 +29,5 @@ This one is created by Yerbol Kuldeyev with a great help of Lighthouse Labs.
 !["New tweet appears"](https://github.com/yerbol021/tweeter1/blob/master/public/images/New%20tweet%20appears.png)
 
 !["Tablet version"](https://github.com/yerbol021/tweeter1/blob/master/public/images/Tablet%20version.png)
+
+//revised
